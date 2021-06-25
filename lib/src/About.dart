@@ -40,7 +40,7 @@ class _AboutState extends State<About> {
               controller: controller,
               child: SingleChildScrollView(
                 controller: controller,
-                physics: NeverScrollableScrollPhysics(),
+                //physics: NeverScrollableScrollPhysics(),
                 child: Center(
                   child: Column(
                     children: [

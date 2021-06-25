@@ -37,7 +37,7 @@ class _BlogState extends State<Blog> {
             SmoothScrollWeb(
               controller: controller,
               child: SingleChildScrollView(
-                physics: NeverScrollableScrollPhysics(),
+                // physics: NeverScrollableScrollPhysics(),
                 controller: controller,
                 child: Center(
                   child: Column(

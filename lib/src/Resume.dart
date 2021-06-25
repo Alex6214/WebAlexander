@@ -40,7 +40,7 @@ class _ResumeState extends State<Resume> {
             SmoothScrollWeb(
               controller: controller,
               child: SingleChildScrollView(
-                physics: NeverScrollableScrollPhysics(),
+                //physics: NeverScrollableScrollPhysics(),
                 controller: controller,
                 child: Center(
                   child: Column(

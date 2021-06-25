@@ -85,12 +85,18 @@ class _LandingState extends State<Landing> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        "Alexander Guevara",
-                        style: GoogleFonts.poppins(
-                            fontSize: 71.0,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: FittedBox(
+                          fit: BoxFit.contain,
+                          child: Text(
+                            "Alexander Guevara",
+                            style: GoogleFonts.poppins(
+                                fontSize: 71.0,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white),
+                          ),
+                        ),
                       ),
                       Container(
                         child: Row(
