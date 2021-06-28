@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 import 'package:webprofessional/Custom%20Widgets/ResumeCard.dart';
+import 'package:webprofessional/Custom%20Widgets/ResumeCardExperience.dart';
 
 class Resume extends StatefulWidget {
   @override
@@ -95,21 +96,26 @@ class _ResumeState extends State<Resume> {
                           ? Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                ResumeCard("Education"),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    ResumeCard("Education"),
+                                  ],
+                                ),
                                 SizedBox(
                                   width: 75.0,
                                 ),
-                                ResumeCard("Experience"),
+                                ResumeCardExpe("Experience"),
                               ],
                             )
                           : Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 ResumeCard("Education"),
                                 SizedBox(
                                   height: 35.0,
                                 ),
-                                ResumeCard("Experience"),
+                                ResumeCardExpe("Experience"),
                               ],
                             ),
                       SizedBox(
@@ -145,83 +151,16 @@ class _ResumeState extends State<Resume> {
                                       ? Row(
                                           children: [
                                             PercentItem(),
-                                            SizedBox(
-                                              width: 50.0,
-                                            ),
-                                            PercentItem(),
                                           ],
                                         )
                                       : Column(
                                           children: [
-                                            PercentItem(),
-                                            SizedBox(
-                                              width: 50.0,
-                                            ),
                                             PercentItem(),
                                           ],
                                         ),
                                   SizedBox(
                                     height: 100.0,
                                   ),
-                                  Container(
-                                    width: MediaQuery.of(context).size.width *
-                                            0.7 +
-                                        70,
-                                    child: BootstrapRow(
-                                      height: 350,
-                                      children: [
-                                        BootstrapCol(
-                                          sizes:
-                                              'col-12 col-sm-12 col-md-12 col-lg-6',
-                                          child: Container(
-                                            height: 350.0,
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  "Take a tour of my office",
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 25.0,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Colors.white),
-                                                ),
-                                                SizedBox(
-                                                  height: 20.0,
-                                                ),
-                                                Container(
-                                                  height: 350.0 - 60,
-                                                  child: AutoSizeText(
-                                                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia cum quasi assumenda culpa praesentium consectetur voluptatibus expedita. Voluptatem tempore, aspernatur rem facilis, distinctio nemo! Odio velit, nemo dolorem voluptas!\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium qui aspernatur unde mollitia, in laborum.",
-                                                    style: GoogleFonts.poppins(
-                                                        fontSize: 16.0,
-                                                        fontWeight:
-                                                            FontWeight.w300,
-                                                        color: Colors.white70),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        BootstrapCol(
-                                            sizes:
-                                                'col-12 col-sm-12 col-md-12 col-lg-6',
-                                            child: Container(
-                                              height: 300,
-                                              color: Colors.white,
-                                              child: Image(
-                                                image: NetworkImage(
-                                                    "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ))
-                                      ],
-                                    ),
-                                  )
                                 ],
                               ),
                             ),
@@ -279,7 +218,7 @@ class _PercentItemState extends State<PercentItem> {
       child: Column(
         children: [
           PercentCard(
-            progress: 0.95,
+            progress: 0.85,
             text: "HTML/CSS",
           ),
           PercentCard(
@@ -287,28 +226,32 @@ class _PercentItemState extends State<PercentItem> {
             text: "Web Design",
           ),
           PercentCard(
-            progress: 0.9,
+            progress: 0.95,
             text: "Dart / Flutter",
           ),
           PercentCard(
-            progress: 0.9,
+            progress: 0.95,
             text: "Firebase",
           ),
           PercentCard(
-            progress: 0.9,
+            progress: 0.95,
             text: "Help Desk",
           ),
           PercentCard(
-            progress: 0.9,
+            progress: 0.8,
             text: "Android",
           ),
           PercentCard(
-            progress: 0.9,
+            progress: 0.8,
             text: "Java / JSP",
           ),
           PercentCard(
+            progress: 0.85,
+            text: "office automation",
+          ),
+          PercentCard(
             progress: 0.9,
-            text: "Ofimatica",
+            text: "Git / GitHub",
           ),
         ],
       ),

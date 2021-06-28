@@ -95,15 +95,14 @@ class _AboutState extends State<About> {
                           sizes: 'col-md-12 col-lg-4 col-sm-12',
                           child: MediaQuery.of(context).size.width < 992
                               ? CircleAvatar(
-                                  backgroundImage: NetworkImage(
-                                    "https://images.pexels.com/photos/3671083/pexels-photo-3671083.jpeg?cs=srgb&dl=pexels-katie-e-3671083.jpg&fm=jpg",
-                                  ),
+                                  backgroundImage:
+                                      AssetImage('Asset/perfil1.jpeg'),
                                   radius:
                                       MediaQuery.of(context).size.width * 0.2)
                               : Container(
                                   height: 500,
                                   child: Image(
-                                    image: AssetImage('Asset/dev.jpeg'),
+                                    image: AssetImage('Asset/perfil1.jpeg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -131,7 +130,7 @@ class _AboutState extends State<About> {
                                   height: 6.0,
                                 ),
                                 AutoSizeText(
-                                  "I\'m Alexander Guevara, a visual UX/UI Designer and Web Developer",
+                                  "I\'m Alexander Guevara, a Systems Analyst, Designer, Movil and Web Developer",
                                   maxLines: 2,
                                   style: GoogleFonts.poppins(
                                       fontSize: 33.0,
@@ -142,7 +141,7 @@ class _AboutState extends State<About> {
                                   height: 15.0,
                                 ),
                                 AutoSizeText(
-                                  "I am a freelancer based in the United Kingdom and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.",
+                                  "I am a Systems Analyst with more than 4 years of experience working in the IT area in national companies. Passionate about the IT world with the mission to provide solutions to seemingly complicated problems, using what I learned in high school and constant self-taught training. Eager to learn new technologies and thus be able to keep up with the pace of large companies. ",
                                   maxLines: 5,
                                   style: GoogleFonts.poppins(
                                       fontSize: 16.0,
@@ -310,7 +309,7 @@ class _AboutState extends State<About> {
                               height: 40,
                             ),
                             Text(
-                              "     Services i offer to my clients",
+                              "     Services i offer",
                               style: GoogleFonts.poppins(
                                   fontSize: 15.0,
                                   color: Colors.white70,
@@ -337,43 +336,7 @@ class _AboutState extends State<About> {
                           sizes: 'col-sm-12 col-md-12 col-lg-6',
                           child: ServiceCard(
                             icon: AntDesign.CodeSandbox,
-                            head: "Design Trends",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                          ),
-                        ),
-                        BootstrapCol(
-                          sizes: 'col-sm-12 col-md-12 col-lg-6',
-                          child: ServiceCard(
-                            icon: AntDesign.book,
-                            head: "PSD Design",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                          ),
-                        ),
-                        BootstrapCol(
-                          sizes: 'col-sm-12 col-md-12 col-lg-6',
-                          child: ServiceCard(
-                            icon: AntDesign.like1,
-                            head: "Customer Support",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                          ),
-                        ),
-                        BootstrapCol(
-                          sizes: 'col-sm-12 col-md-12 col-lg-6',
-                          child: ServiceCard(
-                            icon: AntDesign.creditcard,
-                            head: "Web Development",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                          ),
-                        ),
-                        BootstrapCol(
-                          sizes: 'col-sm-12 col-md-12 col-lg-6',
-                          child: ServiceCard(
-                            icon: AntDesign.antdesign,
-                            head: "Fully Responsive",
+                            head: "Systems Analyst",
                             sub:
                                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
                           ),
@@ -382,12 +345,14 @@ class _AboutState extends State<About> {
                           sizes: 'col-sm-12 col-md-12 col-lg-6',
                           child: ServiceCard(
                             icon: AntDesign.piechart,
-                            head: "Branding",
+                            head: "HELP DESK",
                             sub:
                                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
                           ),
                         ),
                       ]),
+
+                      //codigo para agregar tarjetas -----------------------------------------------------------
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Column(
@@ -396,18 +361,18 @@ class _AboutState extends State<About> {
                             SizedBox(
                               height: 40,
                             ),
+                            //Text(
+                            //"     Get started my services",
+                            //  style: GoogleFonts.poppins(
+                            //    fontSize: 15.0,
+                            //    color: Colors.white70,
+                            //   fontWeight: FontWeight.w400),
+                            // ),
+                            //SizedBox(
+                            // height: 8.0,
+                            // ),
                             Text(
-                              "     Get started with my services",
-                              style: GoogleFonts.poppins(
-                                  fontSize: 15.0,
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Text(
-                              "  Choose a Plan",
+                              "  My certificates",
                               style: GoogleFonts.poppins(
                                   fontSize: 46.0,
                                   fontWeight: FontWeight.w700,
@@ -429,21 +394,66 @@ class _AboutState extends State<About> {
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
                                         icon: AntDesign.smile_circle,
-                                        btext: "Get Started",
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
                                       ),
                                     ),
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
                                         icon: AntDesign.user,
-                                        btext: "Get pro",
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
                                       ),
                                     ),
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
                                         icon: AntDesign.smile_circle,
-                                        btext: "Get Started",
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
+                                      ),
+                                    ),
+                                    BootstrapCol(
+                                      sizes: 'col-sm-12 col-md-12 col-lg-4',
+                                      child: PlanCard(
+                                        icon: AntDesign.smile_circle,
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
+                                      ),
+                                    ),
+                                    BootstrapCol(
+                                      sizes: 'col-sm-12 col-md-12 col-lg-4',
+                                      child: PlanCard(
+                                        icon: AntDesign.smile_circle,
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
+                                      ),
+                                    ),
+                                    BootstrapCol(
+                                      sizes: 'col-sm-12 col-md-12 col-lg-4',
+                                      child: PlanCard(
+                                        icon: AntDesign.smile_circle,
+                                        btext: "View",
+                                        name:
+                                            "Desarrollo de Aplicaciones Móviles",
+                                        platform: "Google Activate - 2020",
+                                        id: "fdsfsdfs",
                                       ),
                                     ),
                                   ],
@@ -452,7 +462,7 @@ class _AboutState extends State<About> {
                             )
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -495,7 +505,10 @@ class _AboutState extends State<About> {
 class PlanCard extends StatefulWidget {
   final IconData icon;
   final String btext;
-  PlanCard({this.btext, this.icon});
+  final String name;
+  final String platform;
+  final String id;
+  PlanCard({this.btext, this.icon, this.name, this.platform, this.id});
   @override
   _PlanCardState createState() => _PlanCardState();
 }
@@ -505,7 +518,7 @@ class _PlanCardState extends State<PlanCard> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 50),
-      height: 550,
+      height: 450,
       color: Color(0xff161616),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -519,7 +532,7 @@ class _PlanCardState extends State<PlanCard> {
             height: 40.0,
           ),
           Text(
-            "Mobile App Design",
+            widget.name,
             style: GoogleFonts.poppins(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w300,
@@ -529,7 +542,7 @@ class _PlanCardState extends State<PlanCard> {
             height: 15.0,
           ),
           Text(
-            "Responsive Design",
+            widget.platform,
             style: GoogleFonts.poppins(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w300,
@@ -539,27 +552,7 @@ class _PlanCardState extends State<PlanCard> {
             height: 15.0,
           ),
           Text(
-            "Database Development",
-            style: GoogleFonts.poppins(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w300,
-                color: Colors.white70),
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Text(
-            "Web Design",
-            style: GoogleFonts.poppins(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w300,
-                color: Colors.white70),
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Text(
-            "24/7 Support",
+            widget.id,
             style: GoogleFonts.poppins(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w300,

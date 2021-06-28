@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 
@@ -162,73 +163,71 @@ class _MessageMeState extends State<MessageMe> {
           ? MediaQuery.of(context).size.width * 0.4
           : MediaQuery.of(context).size.width * 0.65,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Message me",
+            "Contact me",
             style: GoogleFonts.poppins(
                 fontSize: 25.0,
                 color: Colors.white,
                 fontWeight: FontWeight.w500),
           ),
           SizedBox(
-            height: 10.0,
+            height: 50.0,
           ),
-          Row(
-            children: [
-              CustomTextFormField(
-                hint: "Name",
-              ),
-              SizedBox(
-                width: 25.0,
-              ),
-              CustomTextFormField(
-                hint: "Email",
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 25.0,
-          ),
-          Container(
-            height: 50,
-            child: CustomTextFormField(
-              hint: "Subject",
-            ),
-          ),
-          SizedBox(
-            height: 25.0,
-          ),
-          Container(
-            height: 200,
-            child: CustomTextFormField(
-              hint: "Message",
-              max: 25,
-            ),
-          ),
-          SizedBox(
-            height: 25.0,
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              height: 50,
-              width: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50.0),
-                color: Color(0xff009e66),
-              ),
-              child: Center(
-                child: Text(
-                  "Send Message",
-                  style: GoogleFonts.poppins(
-                      fontSize: 18.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500),
+          Padding(
+            padding: const EdgeInsets.all(28.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50.0),
+                      //color: Color(0xff009e66),
+                    ),
+                    child: Center(
+                      child: IconButton(
+                        icon: SvgPicture.asset(
+                          'Asset/whatsapp.svg',
+                          height: 110,
+                        ),
+                        iconSize: 80,
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+                SizedBox(
+                  height: 50,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50.0),
+                      //color: Color(0xff009e66),
+                    ),
+                    child: Center(
+                      child: IconButton(
+                        icon: SvgPicture.asset(
+                          'Asset/mensajero.svg',
+                          height: 110,
+                        ),
+                        iconSize: 80,
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          )
+          ),
         ],
       ),
     );

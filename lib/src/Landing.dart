@@ -8,7 +8,7 @@ class Landing extends StatefulWidget {
 }
 
 List navitems = ["About", "Resume", "Blog", "Contact"];
-List text = ["Freelancer", "Designer", "Devoleper"];
+List text = ["Analyst", "Designer", "Devoleper"];
 
 class _LandingState extends State<Landing> {
   double width = 180;

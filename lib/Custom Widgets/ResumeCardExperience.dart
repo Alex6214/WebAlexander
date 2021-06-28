@@ -2,15 +2,15 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ResumeCard extends StatefulWidget {
+class ResumeCardExpe extends StatefulWidget {
   final String head;
-  ResumeCard(this.head);
+  ResumeCardExpe(this.head);
 
   @override
-  _ResumeCardState createState() => _ResumeCardState();
+  _ResumeCardExpeState createState() => _ResumeCardExpeState();
 }
 
-class _ResumeCardState extends State<ResumeCard> {
+class _ResumeCardExpeState extends State<ResumeCardExpe> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,9 +29,10 @@ class _ResumeCardState extends State<ResumeCard> {
             height: 15.0,
           ),
           CustomCard(
-            head: "computer and information technology",
-            sub2: "technical graduate",
-            sub: "Instituto Superior SISE / 2017 - 2020",
+            head: "Maderas America S.A.C",
+            sub2:
+                "Peruvian capital company with more than 15 years of experience in the commercialization of the timber industry and its derivatives.",
+            sub: "Systems Analyst / 2021 - currently",
           ),
           Container(
             height: 1.5,
@@ -40,10 +41,25 @@ class _ResumeCardState extends State<ResumeCard> {
                 : MediaQuery.of(context).size.width * 0.7,
             color: Colors.white,
           ),
+          CustomCard(
+            head: "Representaciones Comerciales Richard",
+            sub2:
+                "Company specialized in the commercialization of mattresses, foams and upholstery articles with headquarters in Villa el Salvador and Pucallpa.",
+            sub: "Systems Analyst / 2016 - 2021",
+          ),
           Container(
-            height: 500,
-            width: 100,
-          )
+            height: 1.5,
+            width: MediaQuery.of(context).size.width > 950
+                ? MediaQuery.of(context).size.width * 0.35
+                : MediaQuery.of(context).size.width * 0.7,
+            color: Colors.white,
+          ),
+          CustomCard(
+            head: "VIVA FM",
+            sub2:
+                "Successful radio station with 17 years of experience, pioneer in the Streaming world being the first Smart radio in Peru.",
+            sub: "developer / 2020 - 2021",
+          ),
         ],
       ),
     );
