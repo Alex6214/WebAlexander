@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 
@@ -419,7 +420,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.google,
+                                        icon: 'Asset/google.svg',
                                         btext: "View",
                                         name:
                                             "Desarrollo de Aplicaciones Móviles",
@@ -430,7 +431,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.google,
+                                        icon: 'Asset/google.svg',
                                         btext: "View",
                                         name: "e-commerce",
                                         platform: "Google Activate - 2020",
@@ -440,7 +441,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.google,
+                                        icon: 'Asset/google.svg',
                                         btext: "View",
                                         name: "Cloud Computing",
                                         platform: "Google Activate - 2020",
@@ -450,7 +451,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.printer,
+                                        icon: 'Asset/linux.svg',
                                         btext: "View",
                                         name: "Linux",
                                         platform:
@@ -460,7 +461,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.smile_circle,
+                                        icon: 'Asset/cisco.svg',
                                         btext: "View",
                                         name: "CCNA1 Certificate",
                                         platform: "CISCO - 2018",
@@ -513,7 +514,7 @@ class _AboutState extends State<About> {
 }
 
 class PlanCard extends StatefulWidget {
-  final IconData icon;
+  final String icon;
   final String btext;
   final String name;
   final String platform;
@@ -533,10 +534,9 @@ class _PlanCardState extends State<PlanCard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
+          SvgPicture.asset(
             widget.icon,
-            color: Color(0xff009e66),
-            size: 75.0,
+            height: 75,
           ),
           SizedBox(
             height: 40.0,

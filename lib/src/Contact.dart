@@ -106,7 +106,7 @@ class _ContactState extends State<Contact> {
                               children: [
                                 MessageMe(),
                                 SizedBox(
-                                  width: 45.0,
+                                  width: 15.0,
                                 ),
                                 ContactInfo(),
                               ],
@@ -179,10 +179,10 @@ class _MessageMeState extends State<MessageMe> {
           Padding(
             padding: const EdgeInsets.all(28.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.center,
                   child: Container(
                     height: 100,
                     width: 100,

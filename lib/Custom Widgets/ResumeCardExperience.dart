@@ -80,7 +80,7 @@ class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 300,
       width: MediaQuery.of(context).size.width > 950
           ? MediaQuery.of(context).size.width * 0.35
           : MediaQuery.of(context).size.width * 0.7,

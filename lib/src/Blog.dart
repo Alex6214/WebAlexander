@@ -3,12 +3,12 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 
-class Blog extends StatefulWidget {
+class Projects extends StatefulWidget {
   @override
-  _BlogState createState() => _BlogState();
+  _ProjectsState createState() => _ProjectsState();
 }
 
-class _BlogState extends State<Blog> {
+class _ProjectsState extends State<Projects> {
   bool condition = false;
   double height = 0;
   ScrollController controller = ScrollController();
@@ -141,7 +141,19 @@ class _BlogState extends State<Blog> {
                                   width: 470.0,
                                   child: BlogCard(
                                       image: "",
-                                      head: "Inteface Viva FM",
+                                      head: "Interface Viva FM",
+                                      sub:
+                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
+                                ),
+                              ),
+                              BootstrapCol(
+                                fit: FlexFit.tight,
+                                sizes: 'col-md-6 col-lg-4 col-sm-12 col-xs-12',
+                                child: Container(
+                                  width: 470.0,
+                                  child: BlogCard(
+                                      image: "",
+                                      head: "Wep Page Maderas America S.A.C",
                                       sub:
                                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
                                 ),

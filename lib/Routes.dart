@@ -19,7 +19,7 @@ class Flurorouter {
 
   static Handler _blogHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
-          Blog());
+          Projects());
 
   static Handler _contactHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
@@ -40,7 +40,7 @@ class Flurorouter {
       // transitionType: TransitionType.fadeIn,
     );
     router.define(
-      '/Blog',
+      '/Projects',
       handler: _blogHandler,
       // transitionType: TransitionType.fadeIn,
     );

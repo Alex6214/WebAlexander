@@ -86,7 +86,7 @@ class _LandingState extends State<Landing> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: FittedBox(
                           fit: BoxFit.contain,
                           child: Text(
@@ -105,7 +105,7 @@ class _LandingState extends State<Landing> {
                             Text(
                               "I'm a ",
                               style: GoogleFonts.poppins(
-                                  fontSize: 31.0,
+                                  fontSize: 28.0,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white),
                             ),
@@ -128,13 +128,13 @@ class _LandingState extends State<Landing> {
                                 name,
                                 softWrap: false,
                                 style: GoogleFonts.poppins(
-                                    fontSize: 31.0,
+                                    fontSize: 28.0,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.white),
                               ),
                             ),
                             Container(
-                              height: 29.0,
+                              height: 25.0,
                               width: 2.0,
                               color: Colors.white,
                             )
