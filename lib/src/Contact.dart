@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatefulWidget {
   @override
@@ -196,31 +197,9 @@ class _MessageMeState extends State<MessageMe> {
                           height: 110,
                         ),
                         iconSize: 80,
-                        onPressed: () {},
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      //color: Color(0xff009e66),
-                    ),
-                    child: Center(
-                      child: IconButton(
-                        icon: SvgPicture.asset(
-                          'Asset/mensajero.svg',
-                          height: 110,
-                        ),
-                        iconSize: 80,
-                        onPressed: () {},
+                        onPressed: () {
+                          _launchWhatsApp();
+                        },
                       ),
                     ),
                   ),
@@ -394,5 +373,14 @@ class _ContactCardState extends State<ContactCard> {
         ],
       ),
     );
+  }
+}
+
+_launchWhatsApp() async {
+  const url = 'https://api.whatsapp.com/send?phone=+51992017443';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

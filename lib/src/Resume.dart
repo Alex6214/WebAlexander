@@ -253,6 +253,10 @@ class _PercentItemState extends State<PercentItem> {
             progress: 0.9,
             text: "Git / GitHub",
           ),
+          PercentCard(
+            progress: 0.99,
+            text: "Autodidact",
+          ),
         ],
       ),
     );

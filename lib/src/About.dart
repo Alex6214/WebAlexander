@@ -95,8 +95,16 @@ class _AboutState extends State<About> {
                           sizes: 'col-md-12 col-lg-4 col-sm-12',
                           child: MediaQuery.of(context).size.width < 992
                               ? CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('Asset/perfil1.jpeg'),
+                                  backgroundColor: Colors.transparent,
+                                  child: ClipOval(
+                                    child: Image(
+                                      image: AssetImage('Asset/perfil1.jpeg'),
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+
+                                  //backgroundImage:
+                                  // AssetImage('Asset/perfil1.jpeg'),
                                   radius:
                                       MediaQuery.of(context).size.width * 0.2)
                               : Container(
@@ -142,7 +150,7 @@ class _AboutState extends State<About> {
                                 ),
                                 AutoSizeText(
                                   "I am a Systems Analyst with more than 4 years of experience working in the IT area in national companies. Passionate about the IT world with the mission to provide solutions to seemingly complicated problems, using what I learned in high school and constant self-taught training. Eager to learn new technologies and thus be able to keep up with the pace of large companies. ",
-                                  maxLines: 5,
+                                  maxLines: 7,
                                   style: GoogleFonts.poppins(
                                       fontSize: 16.0,
                                       color: Colors.white70,
@@ -344,6 +352,24 @@ class _AboutState extends State<About> {
                         BootstrapCol(
                           sizes: 'col-sm-12 col-md-12 col-lg-6',
                           child: ServiceCard(
+                            icon: AntDesign.CodeSandbox,
+                            head: "Movil Developer",
+                            sub:
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                          ),
+                        ),
+                        BootstrapCol(
+                          sizes: 'col-sm-12 col-md-12 col-lg-6',
+                          child: ServiceCard(
+                            icon: AntDesign.CodeSandbox,
+                            head: "Web Developer",
+                            sub:
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                          ),
+                        ),
+                        BootstrapCol(
+                          sizes: 'col-sm-12 col-md-12 col-lg-6',
+                          child: ServiceCard(
                             icon: AntDesign.piechart,
                             head: "HELP DESK",
                             sub:
@@ -388,61 +414,47 @@ class _AboutState extends State<About> {
                                     ? MediaQuery.of(context).size.width * 0.6
                                     : MediaQuery.of(context).size.width * 0.9,
                                 child: BootstrapRow(
-                                  height: 500,
+                                  height: 400,
                                   children: [
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.smile_circle,
+                                        icon: AntDesign.google,
                                         btext: "View",
                                         name:
                                             "Desarrollo de Aplicaciones Móviles",
                                         platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
+                                        // id: "PRG DNA WEV",
                                       ),
                                     ),
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.user,
+                                        icon: AntDesign.google,
                                         btext: "View",
-                                        name:
-                                            "Desarrollo de Aplicaciones Móviles",
+                                        name: "e-commerce",
                                         platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
+                                        // id: "MMA EFK BBT",
                                       ),
                                     ),
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.smile_circle,
+                                        icon: AntDesign.google,
                                         btext: "View",
-                                        name:
-                                            "Desarrollo de Aplicaciones Móviles",
+                                        name: "Cloud Computing",
                                         platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
+                                        // id: "93Z Q3W 8LC",
                                       ),
                                     ),
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: AntDesign.smile_circle,
+                                        icon: AntDesign.printer,
                                         btext: "View",
-                                        name:
-                                            "Desarrollo de Aplicaciones Móviles",
-                                        platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
-                                      ),
-                                    ),
-                                    BootstrapCol(
-                                      sizes: 'col-sm-12 col-md-12 col-lg-4',
-                                      child: PlanCard(
-                                        icon: AntDesign.smile_circle,
-                                        btext: "View",
-                                        name:
-                                            "Desarrollo de Aplicaciones Móviles",
-                                        platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
+                                        name: "Linux",
+                                        platform:
+                                            "Linux Professional Institute - 2018",
                                       ),
                                     ),
                                     BootstrapCol(
@@ -450,10 +462,8 @@ class _AboutState extends State<About> {
                                       child: PlanCard(
                                         icon: AntDesign.smile_circle,
                                         btext: "View",
-                                        name:
-                                            "Desarrollo de Aplicaciones Móviles",
-                                        platform: "Google Activate - 2020",
-                                        id: "fdsfsdfs",
+                                        name: "CCNA1 Certificate",
+                                        platform: "CISCO - 2018",
                                       ),
                                     ),
                                   ],
@@ -507,8 +517,8 @@ class PlanCard extends StatefulWidget {
   final String btext;
   final String name;
   final String platform;
-  final String id;
-  PlanCard({this.btext, this.icon, this.name, this.platform, this.id});
+
+  PlanCard({this.btext, this.icon, this.name, this.platform});
   @override
   _PlanCardState createState() => _PlanCardState();
 }
@@ -518,7 +528,7 @@ class _PlanCardState extends State<PlanCard> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 50),
-      height: 450,
+      height: 550,
       color: Color(0xff161616),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -550,13 +560,6 @@ class _PlanCardState extends State<PlanCard> {
           ),
           SizedBox(
             height: 15.0,
-          ),
-          Text(
-            widget.id,
-            style: GoogleFonts.poppins(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w300,
-                color: Colors.white70),
           ),
           SizedBox(
             height: 30.0,

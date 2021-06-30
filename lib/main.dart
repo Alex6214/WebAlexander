@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:webprofessional/Routes.dart';
 
-void main() => runApp(MaterialApp(title: "Alexnader Guevara", home: MyApp()));
+void main() => runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Alexnader Guevara",
+    home: MyApp()));
 
 class MyApp extends StatefulWidget {
   @override
