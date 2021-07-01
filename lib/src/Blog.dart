@@ -140,18 +140,6 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "",
-                                      head: "Interface Viva FM",
-                                      sub:
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
-                                ),
-                              ),
-                              BootstrapCol(
-                                fit: FlexFit.tight,
-                                sizes: 'col-md-6 col-lg-4 col-sm-12 col-xs-12',
-                                child: Container(
-                                  width: 470.0,
-                                  child: BlogCard(
                                       image: "Asset/WebPageMaderas.JPG",
                                       head: "Wep Page Maderas America S.A.C",
                                       sub:
@@ -226,10 +214,10 @@ class _BlogCardState extends State<BlogCard> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(3.0),
-                color: Colors.white70,
+                color: Colors.transparent,
                 image: DecorationImage(
                   image: AssetImage(widget.image),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               height: 231,

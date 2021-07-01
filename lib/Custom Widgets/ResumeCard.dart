@@ -41,7 +41,7 @@ class _ResumeCardState extends State<ResumeCard> {
             color: Colors.white,
           ),
           Container(
-            height: 500,
+            height: 580,
             width: 100,
           )
         ],
