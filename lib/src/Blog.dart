@@ -104,7 +104,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "",
+                                      image: "Asset/softwarercr.JPG",
                                       head: "software of asistance",
                                       sub:
                                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
@@ -116,7 +116,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "",
+                                      image: "Asset/intranetAmerica.JPG",
                                       head: "intranet",
                                       sub:
                                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
@@ -128,7 +128,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "",
+                                      image: "Asset/mywebpage.JPG",
                                       head: "My web page",
                                       sub:
                                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
@@ -152,7 +152,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "",
+                                      image: "Asset/WebPageMaderas.JPG",
                                       head: "Wep Page Maderas America S.A.C",
                                       sub:
                                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
@@ -228,7 +228,7 @@ class _BlogCardState extends State<BlogCard> {
                 borderRadius: BorderRadius.circular(3.0),
                 color: Colors.white70,
                 image: DecorationImage(
-                  image: NetworkImage(widget.image),
+                  image: AssetImage(widget.image),
                   fit: BoxFit.cover,
                 ),
               ),
