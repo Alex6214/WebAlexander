@@ -420,7 +420,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: 'Asset/google.svg',
+                                        icon: 'Asset/google.png',
                                         btext: "View",
                                         name:
                                             "Desarrollo de Aplicaciones Móviles",
@@ -431,7 +431,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: 'Asset/google.svg',
+                                        icon: 'Asset/google.png',
                                         btext: "View",
                                         name: "e-commerce",
                                         platform: "Google Activate - 2020",
@@ -441,7 +441,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: 'Asset/google.svg',
+                                        icon: 'Asset/google.png',
                                         btext: "View",
                                         name: "Cloud Computing",
                                         platform: "Google Activate - 2020",
@@ -451,7 +451,7 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: 'Asset/linux.svg',
+                                        icon: 'Asset/linux.png',
                                         btext: "View",
                                         name: "Linux",
                                         platform:
@@ -461,10 +461,20 @@ class _AboutState extends State<About> {
                                     BootstrapCol(
                                       sizes: 'col-sm-12 col-md-12 col-lg-4',
                                       child: PlanCard(
-                                        icon: 'Asset/cisco.svg',
+                                        icon: 'Asset/cisco.png',
                                         btext: "View",
                                         name: "CCNA1 Certificate",
                                         platform: "CISCO - 2018",
+                                      ),
+                                    ),
+                                    BootstrapCol(
+                                      sizes: 'col-sm-12 col-md-12 col-lg-4',
+                                      child: PlanCard(
+                                        icon: 'Asset/iconplatzi.png',
+                                        btext: "View",
+                                        name:
+                                            "Estrategias para aprender ingles",
+                                        platform: "PLatzi - 2021",
                                       ),
                                     ),
                                   ],
@@ -534,10 +544,14 @@ class _PlanCardState extends State<PlanCard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
+          Image.asset(
             widget.icon,
-            height: 75,
+            height: 80,
           ),
+          //SvgPicture.asset(
+          //  widget.icon,
+          //  height: 75,
+          // ),
           SizedBox(
             height: 40.0,
           ),
