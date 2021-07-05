@@ -222,6 +222,10 @@ class _PercentItemState extends State<PercentItem> {
             text: "HTML/CSS",
           ),
           PercentCard(
+            progress: 0.75,
+            text: ".NET",
+          ),
+          PercentCard(
             progress: 0.8,
             text: "Web Design",
           ),

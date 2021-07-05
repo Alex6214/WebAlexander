@@ -106,8 +106,7 @@ class _ProjectsState extends State<Projects> {
                                   child: BlogCard(
                                       image: "Asset/softwarercr.JPG",
                                       head: "software of asistance",
-                                      sub:
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
+                                      sub: ""),
                                 ),
                               ),
                               BootstrapCol(
@@ -118,8 +117,7 @@ class _ProjectsState extends State<Projects> {
                                   child: BlogCard(
                                       image: "Asset/intranetAmerica.JPG",
                                       head: "intranet",
-                                      sub:
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
+                                      sub: ""),
                                 ),
                               ),
                               BootstrapCol(
@@ -130,8 +128,7 @@ class _ProjectsState extends State<Projects> {
                                   child: BlogCard(
                                       image: "Asset/mywebpage.JPG",
                                       head: "My web page",
-                                      sub:
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
+                                      sub: ""),
                                 ),
                               ),
                               BootstrapCol(
@@ -142,8 +139,7 @@ class _ProjectsState extends State<Projects> {
                                   child: BlogCard(
                                       image: "Asset/WebPageMaderas.JPG",
                                       head: "Wep Page Maderas America S.A.C",
-                                      sub:
-                                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas"),
+                                      sub: ""),
                                 ),
                               ),
                             ],
