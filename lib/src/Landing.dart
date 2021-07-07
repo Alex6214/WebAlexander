@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Landing extends StatefulWidget {
   @override
@@ -181,7 +182,6 @@ class _LandingState extends State<Landing> {
                           padding: const EdgeInsets.only(right: 25.0),
                           child: Column(
                             children: [
-                              Icon(AntDesign.twitter, color: Colors.white),
                               SizedBox(
                                 height: 15.0,
                               ),
@@ -190,16 +190,25 @@ class _LandingState extends State<Landing> {
                               SizedBox(
                                 height: 15.0,
                               ),
-                              Icon(AntDesign.linkedin_square,
-                                  color: Colors.white),
+                              GestureDetector(
+                                onTap: () {
+                                  _launchLINKEDIN();
+                                },
+                                child: Icon(AntDesign.linkedin_square,
+                                    color: Colors.white),
+                              ),
                               SizedBox(
                                 height: 15.0,
                               ),
-                              Icon(AntDesign.github, color: Colors.white),
+                              GestureDetector(
+                                  onTap: () {
+                                    _launchGITHUB();
+                                  },
+                                  child: Icon(AntDesign.github,
+                                      color: Colors.white)),
                               SizedBox(
                                 height: 15.0,
                               ),
-                              Icon(AntDesign.instagram, color: Colors.white),
                             ],
                           ),
                         )
@@ -267,5 +276,23 @@ class _NavButtonState extends State<NavButton> {
         ),
       ),
     );
+  }
+}
+
+_launchLINKEDIN() async {
+  const url = 'https://www.linkedin.com/in/guevaraa/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchGITHUB() async {
+  const url = 'https://github.com/Alex6214';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

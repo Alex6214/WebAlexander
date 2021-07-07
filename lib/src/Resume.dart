@@ -234,6 +234,14 @@ class _PercentItemState extends State<PercentItem> {
             text: "Dart / Flutter",
           ),
           PercentCard(
+            progress: 0.9,
+            text: "SQL SERVER / MYSQL ",
+          ),
+          PercentCard(
+            progress: 0.9,
+            text: "ORACLE",
+          ),
+          PercentCard(
             progress: 0.95,
             text: "Firebase",
           ),

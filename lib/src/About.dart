@@ -5,6 +5,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_scroll_web/smooth_scroll_web.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatefulWidget {
   @override
@@ -232,21 +233,26 @@ class _AboutState extends State<About> {
                                 ),
                                 Row(
                                   children: [
-                                    Container(
-                                      height: 45,
-                                      width: 200,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(50.0),
-                                        color: Color(0xff009e66),
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          "Download CV",
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 16.0,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400),
+                                    GestureDetector(
+                                      onTap: () {
+                                        _launchCV();
+                                      },
+                                      child: Container(
+                                        height: 45,
+                                        width: 200,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(50.0),
+                                          color: Color(0xff009e66),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "Download CV",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16.0,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -262,11 +268,6 @@ class _AboutState extends State<About> {
                                     MediaQuery.of(context).size.width > 670
                                         ? Row(
                                             children: [
-                                              Icon(
-                                                AntDesign.twitter,
-                                                color: Colors.white70,
-                                                size: 18.0,
-                                              ),
                                               SizedBox(
                                                 width: 15.0,
                                               ),
@@ -278,26 +279,31 @@ class _AboutState extends State<About> {
                                               SizedBox(
                                                 width: 15.0,
                                               ),
-                                              Icon(
-                                                AntDesign.linkedin_square,
-                                                color: Colors.white70,
-                                                size: 18.0,
+                                              GestureDetector(
+                                                onTap: () {
+                                                  _launchLINKEDIN();
+                                                },
+                                                child: Icon(
+                                                  AntDesign.linkedin_square,
+                                                  color: Colors.white70,
+                                                  size: 18.0,
+                                                ),
                                               ),
                                               SizedBox(
                                                 width: 15.0,
                                               ),
-                                              Icon(
-                                                AntDesign.github,
-                                                color: Colors.white70,
-                                                size: 18.0,
+                                              GestureDetector(
+                                                onTap: () {
+                                                  _launchGITHUB();
+                                                },
+                                                child: Icon(
+                                                  AntDesign.github,
+                                                  color: Colors.white70,
+                                                  size: 18.0,
+                                                ),
                                               ),
                                               SizedBox(
                                                 width: 15.0,
-                                              ),
-                                              Icon(
-                                                AntDesign.instagram,
-                                                color: Colors.white70,
-                                                size: 18.0,
                                               ),
                                             ],
                                           )
@@ -346,8 +352,7 @@ class _AboutState extends State<About> {
                           child: ServiceCard(
                             icon: AntDesign.CodeSandbox,
                             head: "Systems Analyst",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                            sub: "",
                           ),
                         ),
                         BootstrapCol(
@@ -355,8 +360,7 @@ class _AboutState extends State<About> {
                           child: ServiceCard(
                             icon: AntDesign.CodeSandbox,
                             head: "Movil Developer",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                            sub: "",
                           ),
                         ),
                         BootstrapCol(
@@ -364,8 +368,7 @@ class _AboutState extends State<About> {
                           child: ServiceCard(
                             icon: AntDesign.CodeSandbox,
                             head: "Web Developer",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                            sub: "",
                           ),
                         ),
                         BootstrapCol(
@@ -373,8 +376,7 @@ class _AboutState extends State<About> {
                           child: ServiceCard(
                             icon: AntDesign.piechart,
                             head: "HELP DESK",
-                            sub:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                            sub: "",
                           ),
                         ),
                       ]),
@@ -578,20 +580,25 @@ class _PlanCardState extends State<PlanCard> {
           SizedBox(
             height: 30.0,
           ),
-          Container(
-            height: 40.0,
-            width: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50.0),
-              color: Color(0xff009e66),
-            ),
-            child: Center(
-              child: Text(
-                widget.btext,
-                style: GoogleFonts.poppins(
-                    fontSize: 16.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300),
+          GestureDetector(
+            onTap: () {
+              _launchLINKEDIN();
+            },
+            child: Container(
+              height: 40.0,
+              width: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50.0),
+                color: Color(0xff009e66),
+              ),
+              child: Center(
+                child: Text(
+                  widget.btext,
+                  style: GoogleFonts.poppins(
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300),
+                ),
               ),
             ),
           ),
@@ -733,5 +740,33 @@ class _CvcardState extends State<Cvcard> {
         ],
       ),
     );
+  }
+}
+
+_launchCV() async {
+  const url =
+      'https://drive.google.com/file/d/14K5mNsm6jUCouCzFRX2V9jaZaM25C58l/view';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchLINKEDIN() async {
+  const url = 'https://www.linkedin.com/in/guevaraa/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchGITHUB() async {
+  const url = 'https://github.com/Alex6214';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
