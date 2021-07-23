@@ -104,9 +104,9 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "Asset/softwarercr.JPG",
-                                      head: "software of asistance",
-                                      sub: ""),
+                                    image: "Asset/softwarercr.JPG",
+                                    head: "software of asistance",
+                                  ),
                                 ),
                               ),
                               BootstrapCol(
@@ -115,9 +115,9 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "Asset/intranetAmerica.JPG",
-                                      head: "intranet",
-                                      sub: ""),
+                                    image: "Asset/intranetAmerica.JPG",
+                                    head: "intranet",
+                                  ),
                                 ),
                               ),
                               BootstrapCol(
@@ -126,9 +126,9 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "Asset/mywebpage.JPG",
-                                      head: "My web page",
-                                      sub: ""),
+                                    image: "Asset/mywebpage.JPG",
+                                    head: "My web page",
+                                  ),
                                 ),
                               ),
                               BootstrapCol(
@@ -137,9 +137,21 @@ class _ProjectsState extends State<Projects> {
                                 child: Container(
                                   width: 470.0,
                                   child: BlogCard(
-                                      image: "Asset/WebPageMaderas.JPG",
-                                      head: "Wep Page Maderas America S.A.C",
-                                      sub: ""),
+                                    image: "Asset/WebPageMaderas.JPG",
+                                    head: "Wep Page Maderas America S.A.C",
+                                  ),
+                                ),
+                              ),
+                              BootstrapCol(
+                                fit: FlexFit.tight,
+                                sizes: 'col-md-6 col-lg-4 col-sm-12 col-xs-12',
+                                child: Container(
+                                  width: 470.0,
+                                  child: BlogCard(
+                                    image: "Asset/WebSarango.JPG",
+                                    head:
+                                        "WEB PAGE SARANGO ABOGADOS Y CONSULTORES",
+                                  ),
                                 ),
                               ),
                             ],
@@ -188,8 +200,8 @@ class _ProjectsState extends State<Projects> {
 class BlogCard extends StatefulWidget {
   final String image;
   final String head;
-  final String sub;
-  BlogCard({this.head, this.image, this.sub});
+
+  BlogCard({this.head, this.image});
 
   @override
   _BlogCardState createState() => _BlogCardState();
@@ -205,7 +217,7 @@ class _BlogCardState extends State<BlogCard> {
       width: 370,
       child: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               decoration: BoxDecoration(
@@ -225,29 +237,13 @@ class _BlogCardState extends State<BlogCard> {
             Container(
               child: Text(
                 widget.head,
-                maxLines: 1,
+                maxLines: 2,
                 style: GoogleFonts.poppins(
                     fontSize: 20.0,
                     color: Colors.white,
                     fontWeight: FontWeight.w600),
               ),
             ),
-            SizedBox(
-              height: 8.0,
-            ),
-            Container(
-              width: 370,
-              child: Text(
-                widget.sub,
-                maxLines: 3,
-                softWrap: true,
-                style: GoogleFonts.poppins(
-                    height: 1.65,
-                    fontSize: 14.0,
-                    color: Colors.white70,
-                    fontWeight: FontWeight.w400),
-              ),
-            )
           ],
         ),
       ),

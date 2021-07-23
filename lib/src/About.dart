@@ -190,7 +190,9 @@ class _AboutState extends State<About> {
                                                     text1: "Name : ",
                                                     text2: "Alexander Guevara",
                                                   ),
-                                                  Spacer(),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
                                                   Cvcard(
                                                     text1: "Mail : ",
                                                     text2:
@@ -220,7 +222,9 @@ class _AboutState extends State<About> {
                                               text1: "Age : ",
                                               text2: "22",
                                             ),
-                                            Spacer(),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
                                             Cvcard(
                                               text1: "From : ",
                                               text2: "Lima, Perú",
@@ -264,7 +268,13 @@ class _AboutState extends State<About> {
                                             margin: EdgeInsets.only(
                                                 left: 7.0, right: 10.0),
                                           )
-                                        : Container(),
+                                        : Container(
+                                            color: Colors.white70,
+                                            width: 50.0,
+                                            height: 1.0,
+                                            margin: EdgeInsets.only(
+                                                left: 7.0, right: 10.0),
+                                          ),
                                     MediaQuery.of(context).size.width > 670
                                         ? Row(
                                             children: [
@@ -307,7 +317,47 @@ class _AboutState extends State<About> {
                                               ),
                                             ],
                                           )
-                                        : Container(),
+                                        : Column(
+                                            children: [
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              Icon(
+                                                AntDesign.facebook_square,
+                                                color: Colors.white70,
+                                                size: 18.0,
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              GestureDetector(
+                                                onTap: () {
+                                                  _launchLINKEDIN();
+                                                },
+                                                child: Icon(
+                                                  AntDesign.linkedin_square,
+                                                  color: Colors.white70,
+                                                  size: 18.0,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                              GestureDetector(
+                                                onTap: () {
+                                                  _launchGITHUB();
+                                                },
+                                                child: Icon(
+                                                  AntDesign.github,
+                                                  color: Colors.white70,
+                                                  size: 18.0,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5.0,
+                                              ),
+                                            ],
+                                          ),
                                   ],
                                 )
                               ],
