@@ -9,7 +9,7 @@ class Landing extends StatefulWidget {
 }
 
 List navitems = ["About", "Resume", "Projects", "Contact"];
-List text = ["Analyst", "Designer", "Devoleper"];
+List text = ["Analyst", "Designer", "Devoleper", "Freelance"];
 
 class _LandingState extends State<Landing> {
   double width = 180;
@@ -115,7 +115,7 @@ class _LandingState extends State<Landing> {
                               curve: Curves.easeInOut,
                               width: width,
                               onEnd: () {
-                                if (i == 3) i = 0;
+                                if (i == 4) i = 0;
                                 if (width == 0) {
                                   name = text[i++];
                                 }
